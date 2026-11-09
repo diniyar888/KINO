@@ -1,0 +1,774 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    color: #F5F2EA;
+    font-family: 'Manrope', Arial, sans-serif;
+    font-size: 22px;
+    line-height: 160%;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 600;
+    line-height: 115%;
+}
+
+h2 {
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+} 
+
+.section {
+    margin-top: 80px;
+    scroll-margin-top: 32px;
+}
+
+.members h2, .albums h2, .songs h2, .facts h2, .gallery h2 {
+    margin-bottom: 32px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 19px 28px;
+    border-radius: 6px;
+    background-color: #F5262C;
+    color: #F5F2EA;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.button:hover {
+    background-color: #D91A21;
+}
+
+/* Шапка */
+
+.header-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    height: 128px;
+    padding-bottom: 18px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 160%;
+}
+
+.header-nav a:hover {
+    color: #F5262C;
+}
+
+.header-listen {
+    border-bottom: 1px solid #BCB8B0;
+    color: #BCB8B0;
+    font-size: 20px;
+    line-height: 160%;
+    white-space: nowrap;
+}
+
+.header-listen:hover {
+    color: #F5F2EA;
+}
+
+/* Баннер */
+
+.banner {
+    padding-bottom: 80px;
+    background-color: #000000;
+}
+
+.banner-block {
+    display: flex;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 3px 0 0 2%;
+}
+
+.banner h1 {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 110%;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.banner h1 span {
+    display: block;
+}
+
+.banner-info {
+    margin-top: auto;
+    padding-top: 26px;
+}
+
+.banner-info p {
+    color: #BCB8B0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+}
+
+.banner-button {
+    justify-content: center;
+    width: 331px;
+    max-width: 100%;
+    height: 56px;
+    margin-top: 34px;
+    padding: 15px 0;
+    border-radius: 4px;
+    background-color: #F20D20;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.banner-visual {
+    display: flex;
+    align-items: flex-end;
+    width: 55%;
+    margin-top: -28px;
+}
+
+.banner-art {
+    width: 100%;
+    height: 576px;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+/* О группе */
+
+.about {
+    margin-top: 0;
+}
+
+.about-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 96px;
+}
+
+.about-photo {
+    width: 49%;
+}
+
+.about-photo img {
+    width: 100%;
+    height: auto;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-text h2 {
+    margin-bottom: 20px;
+    font-size: 82px;
+    line-height: 120%;
+}
+
+.about-text p {
+    max-width: 560px;
+    color: #BCB8B0;
+    font-size: 26px;
+    line-height: 154%;
+}
+
+.about-second {
+    margin-top: 24px;
+}
+
+.about-themes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px solid #303133;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 160%;
+    text-transform: uppercase;
+}
+
+.about-themes li::before {
+    content: '•';
+    margin-right: 12px;
+    color: #F5262C;
+}
+
+/* Участники */
+
+.member-cards {
+    display: flex;
+    gap: 32px;
+}
+
+.member-card {
+    flex: 1;
+    min-width: 0;
+}
+
+.member-photo {
+    height: 24vw;
+    max-height: 458px;
+    overflow: hidden;
+    background-color: #17181A;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.member-tsoi img {
+    width: 170%;
+    height: 170%;
+    max-width: none;
+    margin-top: -26%;
+    margin-left: -34%;
+}
+
+.member-card h3 {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.member-card p {
+    margin-top: 6px;
+    color: #BCB8B0;
+    font-size: 18px;
+    line-height: 160%;
+}
+
+/* Альбомы */
+
+.albums h2 {
+    font-size: 72px;
+    margin-bottom: 24px;
+}
+
+.album-cards {
+    display: flex;
+    gap: 32px;
+}
+
+.album-featured, .album-card {
+    display: flex;
+    gap: 32px;
+    border: 1px solid #292A2D;
+    border-radius: 4px;
+    background-color: #121214;
+}
+
+.album-featured {
+    width: 52%;
+    padding: 24px;
+}
+
+.album-cover {
+    height: auto;
+    border: 1px solid #343438;
+}
+
+.featured-cover {
+    width: 58%;
+}
+
+.featured-cover img {
+    width: 100%;
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+}
+
+.album-label, 
+.album-artist {
+    color: #BCB8B0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 160%;
+    text-transform: uppercase;
+}
+
+.album-year {
+    margin-top: 22px;
+    color: #F5262C;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.album-featured h3 {
+    margin-top: 16px;
+    font-size: 42px;
+}
+
+.album-info p {
+    color: #BCB8B0;
+    font-size: 20px;
+    line-height: 160%;
+}
+
+.album-featured 
+.album-info p {
+    margin-top: 18px;
+}
+
+.album-info 
+.album-note {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #343438;
+}
+
+.album-featured 
+.album-artist {
+    margin-top: auto;
+    padding-top: 28px;
+}
+
+.album-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+    min-width: 0;
+}
+
+.album-card {
+    position: relative;
+    flex: 1;
+    align-items: center;
+    padding: 16px;
+}
+
+.album-card 
+.album-cover {
+    width: 30%;
+}
+
+.album-card h3 {
+    padding-right: 20px;
+    font-family: 'Manrope', Arial, sans-serif;
+    font-size: 27px;
+    line-height: 135%;
+}
+
+.album-info 
+.album-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 18px 0 26px;
+    font-size: 18px;
+}
+
+.album-meta span {
+    padding-right: 14px;
+    border-right: 1px solid #555158;
+    color: #FF4A50;
+    font-weight: 600;
+}
+
+.album-number {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    color: #BCB8B0;
+    font-size: 13px;
+    line-height: 160%;
+}
+
+/* Песни */
+
+.song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    min-height: 84px;
+    padding: 14px 28px;
+    background-color: #08090B;
+    border-bottom: 1px solid #303133;
+    border-radius: 4px;
+}
+
+.song:hover {
+    background-color: #17181A;
+    border-color: transparent;
+}
+
+.song-number {
+    width: 40px;
+    color: #BCB8B0;
+    font-size: 17px;
+    line-height: 160%;
+}
+
+.song-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #737477;
+    border-radius: 50%;
+}
+
+.song-play img {
+    width: 24px;
+    height: 24px;
+}
+
+.song:hover
+.song-play {
+    background-color: #F5262C;
+    border-color: #F5262C;
+}
+
+.song h3 {
+    font-family: 'Manrope', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.song-arrow {
+    width: 30px;
+    height: 24px;
+    margin-left: auto;
+}
+
+/* Факты */
+
+.fact-cards {
+    display: flex;
+    gap: 48px;
+}
+
+.fact-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    min-height: 440px;
+    padding: 32px;
+    border: 1px solid #303133;
+    border-radius: 6px;
+    background-color: #17181A;
+}
+
+.fact-card:hover {
+    background-color: #F5F2EA;
+    color: #08090B;
+    border-color: #F5F2EA;
+}
+
+.fact-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 170px;
+}
+
+.fact-number {
+    color: #F5262C;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 100px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.fact-number-large {
+    font-size: 128px;
+}
+
+.fact-tag {
+    color: #BCB8B0;
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+
+.fact-card:hover .fact-tag {
+    color: #535354;
+}
+
+.fact-text {
+    margin-top: 30px;
+}
+
+.fact-text h3 {
+    font-family: 'Manrope', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.fact-text p {
+    margin-top: 16px;
+    color: #BCB8B0;
+    font-size: 21px;
+    line-height: 160%;
+}
+
+.fact-card:hover .fact-text p {
+    color: #4D4D4F;
+}
+
+/* Галерея */
+
+.gallery {
+    padding: 112px 0 66px;
+    background-color: #08090B;
+    border-bottom: 1px solid #252628;
+}
+
+.gallery-photos {
+    display: flex;
+    gap: 32px;
+}
+
+.gallery-item {
+    flex: 1;
+    min-width: 0;
+}
+
+.gallery-wide {
+    flex-grow: 2;
+    flex-basis: 32px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 498px;
+}
+
+.gallery-item img {
+    object-fit: cover;
+}
+
+.gallery-photo {
+    overflow: hidden;
+}
+
+.gallery-tsoi img {
+    position: relative;
+    top: -28%;
+    left: -25%;
+    width: 150%;
+    height: 180%;
+    max-width: none;
+}
+
+.gallery-caption {
+    margin-top: 32px;
+    color: #BCB8B0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 160%;
+    text-transform: uppercase;
+}
+
+/* футер */
+
+footer {
+    margin-top: 80px;
+    padding: 144px 0 40px;
+    background-color: #F5F2EA;
+    color: #08090B;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #C8C5BE;
+}
+
+.footer-top h2 {
+    font-size: 144px;
+    line-height: 120%;
+}
+
+.footer-info {
+    width: 38%;
+}
+
+.footer-info p {
+    margin-bottom: 60px;
+    color: #555557;
+    font-size: 26px;
+    line-height: 160%;
+}
+
+.button-dark {
+    display: flex;
+    width: 100%;
+    min-height: 80px;
+    font-size: 24px;
+    background-color: #08090B;
+}
+
+.footer-arrow {
+    width: 32px;
+    height: 24px;
+}
+
+.button-dark:hover {
+    background-color: #333336;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    padding-top: 40px;
+}
+
+.footer-brand {
+    width: 34%;
+}
+
+.footer-brand .logo img {
+    width: 230px;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.socials img {
+    width: 48px;
+    height: 48px;
+}
+
+.footer-nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 4px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 160%;
+}
+
+.footer-nav div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav a:hover,
+.back-top:hover {
+    color: #D91A21;
+}
+
+.footer-right {
+    width: 380px;
+    text-align: right;
+}
+
+.back-top {
+    display: block;
+    margin: 0 64px 16px 0;
+    font-size: 20px;
+    line-height: 160%;
+}
+
+.footer-author {
+    color: #555557;
+    font-size: 18px;
+    line-height: 160%;
+}
+
+.privacy {
+    display: block;
+    color: #555557;
+    font-size: 16px;
+    line-height: 160%;
+}
